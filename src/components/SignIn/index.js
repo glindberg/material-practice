@@ -3,6 +3,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
@@ -51,7 +52,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
- function SignIn() {
+function SignIn() {
   const classes = useStyles();
 
   return (
@@ -76,7 +77,12 @@ const useStyles = makeStyles(theme => ({
             autoComplete="email"
             autoFocus
           />
+
           <TextField
+            placeholder="MultiLine with rows: 2 and rowsMax: 4"
+            multiline={true}
+            rows={2}
+            rowsMax={4}
             variant="outlined"
             margin="normal"
             required
@@ -87,6 +93,7 @@ const useStyles = makeStyles(theme => ({
             id="password"
             autoComplete="current-password"
           />
+
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
