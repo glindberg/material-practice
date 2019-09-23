@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
+import * as ROUTES from "../../constants/routes"; 
 
 const useStyles = makeStyles({
   root: {
@@ -14,7 +15,9 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ProfileHook() {
+ function ProfileHook() {
   const classes = useStyles();
-  return <Button className={classes.root}>Hook</Button>;
+  return <Button className={classes.root} to={ROUTES.SIGNIN}>Hook</Button>;
 }
+
+export default ProfileHook;

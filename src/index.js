@@ -14,7 +14,7 @@ import * as ROUTES from './constants/routes';
 import SignIn from './components/SignIn';
 import NavBar from './components/Navbar';
 import Blog from './components/Blog';
-import ProfileHook from './components/Profile';
+import ProfilePage from './components/Profile';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       <Route exact path={ROUTES.BLOG} component={Blog} />
       <Route path={ROUTES.NAVBAR} component={NavBar} />
       <Route path={ROUTES.SIGNIN} component={SignIn} />
-      <Route path={ROUTES.PROFILEHOOK} component={ProfileHook} />
+      <Route path={ROUTES.PROFILEPAGE} component={ProfilePage} />
 
       {/* <NavBar/> */}
       {/* <SignIn/> */}
